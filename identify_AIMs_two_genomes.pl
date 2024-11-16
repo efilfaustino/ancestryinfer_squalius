@@ -25,7 +25,7 @@ while((my $line1=<IN1>) && (my $line2=<IN2>)){
     my @elements2=split(//,$line2);
 
     if(scalar(@elements1) != scalar(@elements2)){
-	die;
+	die "Different line lengths. Make sure your two fasta files have the same line length.\n";
     }
 
     

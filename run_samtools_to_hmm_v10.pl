@@ -2,7 +2,7 @@
 
 if(@ARGV<9){
 
-    print "perl run_samtools_to_hmm_v8.pl id_list genome1 genome2 read_length save_files max_align focal_chroms_file rate program_path quality\n"; exit;
+    print "perl run_samtools_to_hmm_v10.pl id_list genome1 genome2 read_length save_files max_align focal_chroms_file rate program_path quality\n"; exit;
 
 }#usage
 
@@ -62,7 +62,7 @@ while (my $id = <IN>){
     chomp $id;
 
     my $append="$chrom_string"; $append=~ s/,/_/g;
-    print "file tag is $append";
+    print "file tag is $append\n";
     my $line1="$id"."_"."$append".".par1.sam";
     my $line2="$id"."_"."$append".".par2.sam";
 

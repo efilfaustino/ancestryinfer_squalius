@@ -138,12 +138,17 @@
 	cd fastahack/
 	make
 
-### ngsutil requires a python2 environment
+### ngsutil requires a python2 environment (IGNORE)
 
+	#cd ~
+	#conda create --name=py2 python=2.7
+	#conda activate py2
+	#conda install -c bioconda ngsutils
 	cd ~
-	conda create --name=py2 python=2.7
-	conda activate py2
-	conda install -c bioconda ngsutils
+	git clone https://github.com/compgen-io/ngsutilsj.git
+	cd ngsutilsj
+	ant jar
+	cd ~
 
 ### need to add seq-gen as well
 
@@ -151,7 +156,7 @@
 
 # now add the build directory to your path
 
-	echo "export PATH=$PATH:~/SELAM/src/:~/Ancestry_HMM/src/:~/fastahack/:~/macs/:~/bedtools2/bin/:~/seqtk/:~/wgsim/" >> ~/.bashrc
+	echo "export PATH=$PATH:~/SELAM/src/:~/Ancestry_HMM/src/:~/fastahack/:~/macs/:~/bedtools2/bin/:~/seqtk/:~/wgsim/:~/ngsutilsj/dist" >> ~/.bashrc
 	source ~/.bashrc
 
 # confirm the installations
