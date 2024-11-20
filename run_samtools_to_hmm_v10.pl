@@ -161,8 +161,8 @@ while (my $id = <IN>){
     system("mv $tmp_list $pass_both");
     }#then subsample, otherwise leave pass list as is
     
-    system("ngsutilsj bam-filter --whitelist $pass_both $unique1 $finalbam1");
-    system("ngsutilsj bam-filter --whitelist $pass_both $unique2 $finalbam2");
+    system("ngsutilsj bam-filter --include $pass_both $unique1 $finalbam1");
+    system("ngsutilsj bam-filter --include $pass_both $unique2 $finalbam2");
     #system("bamutils filter $unique1 $finalbam1 -whitelist $pass_both");
     #system("bamutils filter $unique2 $finalbam2 -whitelist $pass_both");
    
