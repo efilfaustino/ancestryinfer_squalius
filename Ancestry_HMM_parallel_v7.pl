@@ -75,7 +75,7 @@ while (my $line=<CONFIG>){
     }#define priors par1
     if($line=~ /prop_genome_genome2_parent/g){
         $minor_prior2=$elements[1]; chomp $minor_prior2;
-	print "prior prominoion of the genome from parent 2 is $minor_prior2\n";
+	print "prior proportion of the genome from parent 2 is $minor_prior2\n";
     }#define priors par2
     if(($line =~ 'gen_initial_admix=') or ($line=~ /gen_initial_admix_p1_p2/g)){
 	$initial_admix=$elements[1]; chomp $initial_admix;
